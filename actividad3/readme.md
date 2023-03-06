@@ -8,12 +8,15 @@
 ---
 # Solucion 
 Debido a que estamos usando un paquete npm dentro de nuestro contenedor de docker, un servidor de archivos estaticos desarrolador por la empresa Vercel.com
-![Uso del paquete serve en dockerfile](img1.png?raw=true)
+
+![Uso del paquete serve en dockerfile](img1.png?raw=true "Uso del paquete serve en dockerfile")
 
 Utilizaremos una opccion en su ejecucion, una bandera que le indica que estamos sirviendo una SAP (-s), la cual agrega redirecciones a la pagina index.html cuando no se reconcoe la ruta, ya que se manipulan virtualmente en el lado del cliente por React.
-![Uso del paquete serve](img2.png?raw=true)
+
+![Uso del paquete serve para SPA](img2.png?raw=true "Uso del paquete serve para SPA")
 
 __solucion__ 
+
 cambiar
 `CMD ["serve", "build"]`
 por
